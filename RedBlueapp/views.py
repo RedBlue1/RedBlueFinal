@@ -8,3 +8,5 @@ def SignUp(request):
     return render(request, "User/auth-sign-up.html")
 def SignIn(request):
     return render(request, "User/auth-sign-in.html")
+def RecoverPw(request):
+    return render(request, "User/auth-recoverpw.html")
