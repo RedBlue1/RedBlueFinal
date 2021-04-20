@@ -77,17 +77,45 @@
                                 <div class="card-body rec-pat p-0">
                                     <div class="table-responsive">
                                         <table class="table table-striped mb-0 table-borderless">
+
                                             <thead class="">
                                                 <tr>
-                                                    <th>STOCK</th>
+                                                    <th>Name</th>
+                                                    <th>Date</th>
                                                     <th>Price</th>
-                                                    <th>i1</th>
-                                                    <th>i2</th>
-                                                    <th>i3</th>
-                                                    <th>i4</th>
-                                                    <th>Score</th>
+                                                    <th>d_Price</th>
+                                                    <th>EMA26</th>
+                                                    <th>EMA13</th>
+                                                    <th>EMA05</th>
+                                                    <th>d_Vol</th>
+                                                    <th>MACD_height</th>
+                                                    <th>EMA_height</th>
+                                                    <th>EMA_score</th>
+                                                    <th>MACD_score</th>
+                                                    <th>Vol_score</th>
+                                                    <th>RSI</th>
                                                 </tr>
                                             </thead>
+                                            <tbody>
+                                                {% for i in nifty %}
+                                                    <tr>
+                                                        <td>{{ i.name }}</td>
+                                                        <td>{{ i.date }}</td>
+                                                        <td>{{ i.price }}</td>
+                                                        <td>{{ i.d_price }}</td>
+                                                        <td>{{ i.ema26 }}</td>
+                                                        <td>{{ i.ema13 }}</td>
+                                                        <td>{{ i.ema05 }}</td>
+                                                        <td>{{ i.d_vol }}</td>
+                                                        <td>{{ i.macd_height }}</td>
+                                                        <td>{{ i.ema_height }}</td>
+                                                        <td>{{ i.ema_score }}</td>
+                                                        <td>{{ i.macd_score }}</td>
+                                                        <td>{{ i.vol_score }}</td>
+                                                        <td>{{ i.rsi }}</td>
+                                                    </tr>
+                                                {% endfor %}
+                                            </tbody>
                                         </table>
                                     </div>
                                 </div>
