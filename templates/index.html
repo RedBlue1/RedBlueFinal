@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>RedBlue - Home</title>
+        <title>RedBlue</title>
         <!-- Favicon -->
         {% load static %}
         <link rel="stylesheet" href="{% static 'css/backend-plugin.min.css'%}">
@@ -20,7 +20,7 @@
         <!-- loader END -->
         <!-- Wrapper Start -->
         <div class="wrapper">
-            <div class="mm-top-navbar">
+            <div class="mm-top-navbar" style="padding-top: 10px">
                 <div class="mm-navbar-custom">
                     <div class="container">
                         <nav class="navbar navbar-expand-lg navbar-light p-0">
@@ -41,16 +41,8 @@
                                         </div>
                                     </div>
                                     <ul id="mm-sidebar-toggle" class="mm-menu d-flex">
-                                        <li class="">
-                                            <a href="#" class=""><span>User Dashboard</span></a>
-                                        </li>
                                         <li class="active">
                                             <a href="{% url 'index'%}" class=""><span >Swing TA</span></a>
-                                        </li>
-                                        <li class=" ">
-                                            <a href="#pages" class="collapsed" data-toggle="collapse" aria-expanded="false"><span>Other Pages</span>
-                                                <i class="ri-arrow-right-s-line mm-arrow-right"></i>
-                                            </a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -61,12 +53,10 @@
                                 </button>
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul class="navbar-nav ml-auto navbar-list align-items-center">
-                                        <li>
-                                            <a href="{% url 'SignUp'%} " class="btn-outline signupbutton">Sign Up</a>
-                                        </li>
-                                        <li class="nav-item nav-icon caption-content">
-                                            <a href="{% url 'SignIn'%}" class="button-outline signinbutton">Sign In</a>
-                                        </li>
+                                        <div>
+                                            <a href="{% url 'SignUp'%} " class="btn-outline">Sign Up</a>
+                                            <a href="{% url 'SignIn'%}" class="btn btn-outline-primary" style="margin-left: 8px;padding-top: 7px;padding-bottom: 7px;">Sign In</a>
+                                        </div>
                                     </ul>
                                 </div>
                             </div>
@@ -74,6 +64,38 @@
                     </div>
                 </div>
             </div>
+             <div class="content-page">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card card-block card-stretch card-height">
+                                <div class="card-header d-flex justify-content-between border-none">
+                                    <div class="header-title">
+                                        <h4 class="card-title">Nifty50</h4>
+                                    </div>
+                                </div>
+                                <div class="card-body rec-pat p-0">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped mb-0 table-borderless">
+                                            <thead class="">
+                                                <tr>
+                                                    <th>STOCK</th>
+                                                    <th>Price</th>
+                                                    <th>i1</th>
+                                                    <th>i2</th>
+                                                    <th>i3</th>
+                                                    <th>i4</th>
+                                                    <th>Score</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
         </div>
         <!-- Wrapper End-->
 
