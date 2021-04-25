@@ -40,11 +40,6 @@
                                             <i class="wrapper-menu"><img src="{% static 'images/toggler.png'%}"></i>
                                         </div>
                                     </div>
-                                    <ul id="mm-sidebar-toggle" class="mm-menu d-flex">
-                                        <li class="active">
-                                            <a href="{% url 'index'%}" class=""><span >Swing TA</span></a>
-                                        </li>
-                                    </ul>
                                 </nav>
                             </div>
                             <div class="d-flex align-items-center">
@@ -77,41 +72,38 @@
                                 <div class="card-body rec-pat p-0">
                                     <div class="table-responsive table-scrollbar table-wrapper-scroll-y">
                                         <table class="table table-striped mb-0 table-borderless">
-
                                             <thead class="">
                                                 <tr>
-                                                    <th>Name</th>
-                                                    <th>Date</th>
-                                                    <th>Price</th>
-                                                    <th>d_Price</th>
-                                                    <th>EMA26</th>
-                                                    <th>EMA13</th>
-                                                    <th>EMA05</th>
-                                                    <th>d_Vol</th>
-                                                    <th>MACD_height</th>
-                                                    <th>EMA_height</th>
-                                                    <th>EMA_score</th>
-                                                    <th>MACD_score</th>
-                                                    <th>Vol_score</th>
-                                                    <th>RSI</th>
+                                                    <th class="table-th-color">Name</th>
+                                                    <th class="table-th-color">Price</th>
+                                                    <th class="table-th-color">d_Price</th>
+                                                    <th class="table-th-color">EMA26</th>
+                                                    <th class="table-th-color">EMA13</th>
+                                                    <th class="table-th-color">EMA05</th>
+                                                    <th class="table-th-color">d_Vol</th>
+                                                    <th class="table-th-color">MACD_height</th>
+                                                    <th class="table-th-color">EMA_height</th>
+                                                    <th class="table-th-color">EMA_score</th>
+                                                    <th class="table-th-color">MACD_score</th>
+                                                    <th class="table-th-color">Vol_score</th>
+                                                    <th class="table-th-color">RSI</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 {% for i in nifty %}
                                                     <tr>
-                                                        <td>{{ i.name }}</td>
-                                                        <td>{{ i.date }}</td>
+                                                        <td style="font-weight: 600">{{ i.name }}</td>
                                                         <td>{{ i.price }}</td>
-                                                        <td>{{ i.d_price }}</td>
+                                                        <td class="plusmin">{{ i.d_price }}</td>
                                                         <td>{{ i.ema26 }}</td>
                                                         <td>{{ i.ema13 }}</td>
                                                         <td>{{ i.ema05 }}</td>
                                                         <td>{{ i.d_vol }}</td>
                                                         <td>{{ i.macd_height }}</td>
-                                                        <td>{{ i.ema_height }}</td>
-                                                        <td>{{ i.ema_score }}</td>
-                                                        <td>{{ i.macd_score }}</td>
-                                                        <td>{{ i.vol_score }}</td>
+                                                        <td class="plusmin">{{ i.ema_height }}</td>
+                                                        <td class="plusmin">{{ i.ema_score }}</td>
+                                                        <td class="plusmin">{{ i.macd_score }}</td>
+                                                        <td class="plusmin">{{ i.vol_score }}</td>
                                                         <td>{{ i.rsi }}</td>
                                                     </tr>
                                                 {% endfor %}
@@ -126,7 +118,25 @@
              </div>
         </div>
         <!-- Wrapper End-->
-
+        <footer class="mm-footer">
+            <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                                <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 text-right">
+                            <span class="mr-1"><script>document.write(new Date().getFullYear())</script> ©</span> <a href="#" class="">RedBlue</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
         <!-- Backend Bundle JavaScript -->
         {% load static %}
         <script src="{% static 'js/backend-bundle.min.js'%}"></script>

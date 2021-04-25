@@ -150,6 +150,19 @@ Index Of Script
   parents.parents("li").addClass("active");
   jQuery('li.active > a[aria-expanded="false"]').attr("aria-expanded", "true");
 
+  function MakePosNeg(){
+    var TDs = document.querySelectorAll('.plusmin')
+    for(var i=0;i<TDs.length;i++){
+      var temp =TDs[i];
+      if(temp.firstChild.nodeValue.indexOf('-')==0){
+        temp.className ="negative";
+      }
+      else{
+        temp.className="positive";
+      }
+    }
+  }
+  onload = MakePosNeg()
   /*---------------------------------------------------------------------
         FullScreen
         -----------------------------------------------------------------------*/
@@ -632,3 +645,4 @@ Index Of Script
 
 
 })(jQuery);
+
