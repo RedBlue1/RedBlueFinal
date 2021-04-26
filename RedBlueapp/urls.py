@@ -8,4 +8,5 @@ urlpatterns = [
     path('SignUp', views.SignUp, name='SignUp'),
     path('SignIn', views.SignIn, name='SignIn'),
     path('RecoverPw', views.RecoverPw, name='RecoverPw'),
+    path('UserAfterLogin',views.user_after_login, name='UserAfterLogIn')
 ]
